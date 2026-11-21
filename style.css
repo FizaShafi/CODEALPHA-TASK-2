@@ -1,0 +1,135 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #0f172a, #312e81);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* CALCULATOR BOX */
+.calculator {
+    width: 350px;
+    padding: 25px;
+    border-radius: 30px;
+    background: linear-gradient(145deg, #202b42, #151d30);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+/* HEADING */
+h2 {
+    color: white;
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 25px;
+    letter-spacing: 2px;
+}
+
+/* DISPLAY */
+#display {
+    width: 100%;
+    height: 65px;
+    background: #0b1220;
+    color: white;
+    border: 1px solid #374151;
+    border-radius: 15px;
+    outline: none;
+    font-size: 27px;
+    text-align: right;
+    padding: 12px;
+    margin-bottom: 12px;
+}
+
+/* RESULT */
+#result {
+    color: #a78bfa;
+    text-align: right;
+    font-size: 16px;
+    min-height: 28px;
+    margin-bottom: 18px;
+}
+
+/* BUTTON GRID */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    justify-items: center;
+}
+
+/* ALL BUTTONS */
+button {
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    border: none;
+    background: #263650;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 5px 12px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+}
+
+/* HOVER EFFECT */
+button:hover {
+    background: linear-gradient(135deg, #9333ea, #4f46e5);
+    transform: scale(1.12);
+    box-shadow: 0 0 18px rgba(147,51,234,0.6);
+}
+
+/* CLICK EFFECT */
+button:active {
+    transform: scale(0.92);
+}
+
+/* CLEAR BUTTON */
+.clear {
+    background: hwb(51 2% 35%);
+}
+
+/* DELETE BUTTON */
+.delete {
+    background: #823f03;
+}
+
+/* EQUAL BUTTON */
+.equal {
+    background: linear-gradient(135deg, #9333ea, #4f46e5);
+    grid-row: span 2;
+    height: 131px;
+    border-radius: 30px;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 400px) {
+    .calculator {
+        width: 100%;
+        max-width: 350px;
+        padding: 20px;
+    }
+
+    .buttons {
+        gap: 10px;
+    }
+
+    button {
+        width: 52px;
+        height: 52px;
+    }
+
+    .equal {
+        height: 114px;
+    }
+}
